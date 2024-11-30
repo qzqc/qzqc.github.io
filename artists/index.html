@@ -13,10 +13,8 @@
         }
 
         header {
-            background-color: #333;
-            color: #fff;
-            padding: 20px;
             text-align: center;
+            padding: 20px;
         }
 
         main {
@@ -25,7 +23,8 @@
 
         .artist-section {
             display: flex;
-            justify-content: space-around;
+            flex-direction: column;
+            align-items: center;
             margin-top: 30px;
         }
 
@@ -35,7 +34,8 @@
             border-radius: 8px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
             text-align: center;
-            width: 30%;
+            margin: 10px 0;
+            width: 70%;
         }
 
         .artist h3 {
@@ -57,6 +57,7 @@
             padding: 20px;
             background-color: transparent;
             color: #000;
+            margin-top: 50px; /* Copyright'ı alttan çekmek için margin ekledim */
         }
     </style>
 </head>
@@ -74,13 +75,12 @@
                 <p>Artist under qzqc.com.tr Recordings</p>
             </div>
 
-            <!-- alperenxarisoy Artist -->
+            <!-- Aktsoy A.A. Artists -->
             <div class="artist">
                 <h3><a href="/sanatci-alperenxarisoy">Alperen Xarisoy</a></h3>
                 <p>Artist under Aktsoy A.A.</p>
             </div>
 
-            <!-- wenzio Artist -->
             <div class="artist">
                 <h3><a href="/sanatci-wenzio">Wenzio</a></h3>
                 <p>Artist under Aktsoy A.A.</p>
