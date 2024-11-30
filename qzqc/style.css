@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>qzqc - Artist Page</title>
+
+    <!-- Favicon -->
+    <link rel="icon" href="assets/favicon_io/favicon.ico" type="image/x-icon">
+
+    <!-- Styles -->
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        .header {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 15px 0;
+        }
+
+        .main-content {
+            padding: 30px;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .artist-info {
+            text-align: center;
+        }
+
+        .social-media-links {
+            margin-top: 20px;
+        }
+
+        .social-media-links a {
+            display: block;
+            font-size: 18px;
+            color: #007bff; /* Mavi renk */
+            text-decoration: none;
+            margin-bottom: 10px;
+        }
+
+        .social-media-links a:hover {
+            color: #0056b3; /* Hover rengi */
+        }
+
+        .footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="header">
+        <h1>qzqc</h1>
+        <p>Label: qzqc.com.tr</p>
+    </div>
+
+    <div class="main-content">
+        <div class="artist-info">
+            <h2>Social Media Links for qzqc</h2>
+
+            <div class="social-media-links">
+                <a href="https://www.instagram.com/qzqc" target="_blank">Instagram</a>
+                <a href="https://www.tiktok.com/@qzqc_" target="_blank">TikTok</a>
+                <a href="https://www.youtube.com/c/qzqcxyz" target="_blank">YouTube</a>
+                <a href="https://open.spotify.com/artist/qzqc" target="_blank">Spotify</a>
+                <a href="https://music.apple.com/artist/qzqc" target="_blank">Apple Music</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        <p>© 2024 qzqc.com.tr | All Rights Reserved</p>
+    </div>
+
+</body>
+</html>
