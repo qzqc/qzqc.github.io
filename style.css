@@ -6,20 +6,23 @@ body {
   background-color: #ffffff; /* White background */
   overflow: hidden; /* Prevent scrollbars if they appear */
   position: relative; /* Ensure relative positioning to contain the canvas */
+  text-align: center; /* Center the text globally */
 }
 
 /* Container to center content */
 .container {
   max-width: 600px;
   margin: 0 auto;
-  text-align: center;
   padding: 20px;
+  text-align: center; /* Ensure content inside the container is centered */
 }
 
 /* Title styling */
 h1 {
   margin-top: 30px;
   color: #333;
+  font-size: 24px;
+  text-align: center; /* Center align the title */
 }
 
 /* Icon container layout */
@@ -87,8 +90,6 @@ canvas {
   position: fixed !important; /* Ensure it is fixed relative to the viewport */
   top: 0;
   left: 0;
-  width: 100vw; /* Full viewport width */
-  height: 100vh; /* Full viewport height */
   pointer-events: none; /* Prevent the canvas from blocking interactions */
   z-index: 9999; /* Ensure it is always on top of other elements */
 }
