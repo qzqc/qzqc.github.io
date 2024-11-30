@@ -1,20 +1,26 @@
+/* General body styles */
 body {
   margin: 0;
   padding: 0;
   font-family: Arial, sans-serif;
-  background-color: #ffffff;
+  background-color: #ffffff; /* White background */
 }
 
+/* Container to center content */
 .container {
   max-width: 600px;
   margin: 0 auto;
   text-align: center;
+  padding: 20px;
 }
 
+/* Title styling */
 h1 {
   margin-top: 30px;
+  color: #333;
 }
 
+/* Icon container layout */
 .icon-container {
   display: flex;
   flex-wrap: wrap;
@@ -22,6 +28,7 @@ h1 {
   margin-top: 30px;
 }
 
+/* Individual icon styling */
 .icon {
   display: flex;
   flex-direction: column;
@@ -32,14 +39,16 @@ h1 {
   height: 100px;
   border-radius: 50%;
   transition: all 0.3s ease-in-out;
+  background-color: #f1f1f1; /* Background for icons */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
 }
 
 .icon:hover {
-  background-color: #ffbb80;
+  background-color: #ffbb80; /* Icon hover background color */
 }
 
 .icon:hover .icon-text {
-  color: #ffffff;
+  color: #ffffff; /* Icon text color change on hover */
 }
 
 .icon i {
@@ -56,6 +65,7 @@ h1 {
   text-align: center;
 }
 
+/* Time left display styling */
 #timeleft {
   font-size: 20px;
   margin-top: 30px;
