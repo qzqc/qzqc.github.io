@@ -78,6 +78,14 @@ h1 {
   text-align: center;
 }
 
+/* Cookies text styling */
+#cookies-text {
+  margin-top: 30px;
+  font-size: 16px;
+  color: #555;
+  text-align: center;
+}
+
 /* Time left display styling */
 #timeleft {
   font-size: 20px;
