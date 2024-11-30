@@ -1,16 +1,17 @@
-// JavaScript to handle cookie consent
-window.addEventListener('load', () => {
-  // Check if the user has already accepted cookies
-  const cookiesAccepted = localStorage.getItem('cookiesAccepted');
-  
-  if (!cookiesAccepted) {
-    // Show cookie consent banner if not accepted
-    document.getElementById('cookie-consent-banner').style.display = 'flex';
-  }
-
-  // Handle "I Agree" button click
-  document.getElementById('accept-cookies').addEventListener('click', () => {
-    localStorage.setItem('cookiesAccepted', 'true');
-    document.getElementById('cookie-consent-banner').style.display = 'none';
+// Wait for the page to fully load before initializing the effect
+window.addEventListener("load", () => {
+  // Initialize the Fairy Dust Cursor Effect
+  new cursoreffects.fairyDustCursor({
+    colors: ["#ff0000", "#00ff00", "#0000ff"] // Custom colors for the dust particles
   });
+
+  // Ensure the canvas covers the entire page
+  const canvas = document.querySelector('canvas');
+  if (canvas) {
+    canvas.style.position = 'fixed';
+    canvas.style.top = '0';
+    canvas.style.left = '0';
+    canvas.style.width = '100%';
+    canvas.style.height = '100%';
+  }
 });
