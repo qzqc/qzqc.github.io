@@ -7,6 +7,9 @@ body {
   overflow: hidden; /* Prevent scrollbars if they appear */
   position: relative; /* Ensure relative positioning to contain the canvas */
   text-align: center; /* Center the text globally */
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
 
 /* Container to center content */
@@ -15,6 +18,7 @@ body {
   margin: 0 auto;
   padding: 20px;
   text-align: center; /* Ensure content inside the container is centered */
+  flex-grow: 1; /* Make sure container grows to fill available space */
 }
 
 /* Title styling */
@@ -80,10 +84,26 @@ h1 {
 
 /* Cookies text styling */
 #cookies-text {
-  margin-top: 30px;
-  font-size: 16px;
+  font-size: 14px;
   color: #555;
   text-align: center;
+  position: fixed;
+  bottom: 10px;
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.9); /* Slight background to make text readable */
+  padding: 10px 0;
+  box-shadow: 0 -1px 10px rgba(0, 0, 0, 0.1);
+}
+
+.learn-more {
+  color: #007bff; /* Blue color for the link */
+  text-decoration: none;
+  font-weight: bold;
+  margin-left: 5px;
+}
+
+.learn-more:hover {
+  text-decoration: underline; /* Underline on hover */
 }
 
 /* Time left display styling */
