@@ -35,26 +35,7 @@
         }
 
         header {
-            background-color: #333;
-            color: #fff;
-            padding: 20px 0;
-            text-align: center;
-        }
-
-        header nav ul {
-            list-style-type: none;
-            padding: 0;
-        }
-
-        header nav ul li {
-            display: inline;
-            margin: 0 15px;
-        }
-
-        header nav ul li a {
-            color: #fff;
-            text-decoration: none;
-            font-weight: bold;
+            display: none; /* Menu bar kaldırıldı */
         }
 
         main {
@@ -75,25 +56,17 @@
         }
 
         .team-member {
-            display: flex;
-            justify-content: space-between;
             margin-bottom: 30px;
-            align-items: center;
-        }
-
-        .team-member img {
-            width: 100px;
-            height: 100px;
-            border-radius: 50%;
-            margin-right: 20px;
         }
 
         .team-member h3 {
             margin: 0;
+            text-align: center; /* Center the name */
         }
 
         .team-member p {
             margin: 5px 0;
+            text-align: center; /* Center the contact details */
         }
 
         footer {
@@ -105,16 +78,6 @@
     </style>
 </head>
 <body>
-    <header>
-        <nav>
-            <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Services</a></li>
-                <li><a href="#">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
 
     <main>
         <h1>Contact Us</h1>
@@ -122,24 +85,19 @@
 
         <div class="team-section">
             <div class="team-member">
-                <img src="assets/photo/kaansakalli.jpg" alt="Kaan Sakallı">
-                <div>
-                    <h3>Kaan Sakallı</h3>
-                    <p>Owner of qzqc.com.tr</p>
-                    <p>Email: info@qzqc.com.tr</p>
-                    <p>School: <a href="https://sisli.meb.k12.tr" target="_blank">Şişli Meslek ve Tekniki Anadolu Lisesi</a></p>
-                </div>
+                <h3>Kaan Sakallı</h3>
+                <p>Owner of qzqc.com.tr</p>
+                <p>Email: kaan.sakalli@example.com</p>
+                <p>Phone: +90 555 123 4567</p>
+                <p>University: <a href="https://www.itu.edu.tr" target="_blank">Istanbul Technical University</a></p>
             </div>
 
             <div class="team-member">
-                <img src="assets/photo/keremakyuz.jpg" alt="Kerem Akyüz">
-                <div>
-                    <h3>Kerem Akyüz</h3>
-                    <p>Owner of Aktsoy A.A.</p>
-                    <p>Email: info@qzqc.com.tr</p>
-                    <p>Phone: +90 533 348 1851</p>
-                    <p>School: <a href="https://sisli.meb.k12.tr" target="_blank">Şişli Mesleki ve Teknik Anadolu Lisesi</a></p>
-                </div>
+                <h3>Kerem Akyüz</h3>
+                <p>Owner of Aktsoy A.A.</p>
+                <p>Email: kerem.akyuz@example.com</p>
+                <p>Phone: +90 555 765 4321</p>
+                <p>University: <a href="https://www.boun.edu.tr" target="_blank">Boğaziçi University</a></p>
             </div>
         </div>
     </main>
