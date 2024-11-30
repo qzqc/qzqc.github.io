@@ -1,139 +1,88 @@
-/* General body styles */
-body {
-  margin: 0;
-  padding: 0;
-  font-family: Arial, sans-serif;
-  background-color: #ffffff; /* White background */
-  overflow: hidden; /* Prevent scrollbars if they appear */
-}
-
-/* Container to center content */
-.container {
-  max-width: 600px;
-  margin: 0 auto;
-  text-align: center;
-  padding: 20px;
-}
-
-/* Title styling */
-h1 {
-  margin-top: 30px;
-  color: #333;
-}
-
-/* Icon container layout */
-.icon-container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  margin-top: 30px;
-}
-
-/* Individual icon styling */
-.icon {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-decoration: none;
-  margin: 10px;
-  width: 100px;
-  height: 100px;
-  border-radius: 50%;
-  transition: all 0.3s ease-in-out;
-  background-color: #f1f1f1; /* Background for icons */
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
-}
-
-/* Icon hover effect */
-.icon:hover {
-  background-color: #ffbb80; /* Icon hover background color */
-}
-
-.icon:hover .icon-text {
-  color: #ffffff; /* Icon text color change on hover */
-}
-
-/* New icon styles for images */
-.social-icon {
-  width: 50px; /* Adjust size */
-  height: 50px;
-  margin-top: 20px;
-  transition: transform 0.3s ease-in-out;
-}
-
-/* Scale effect on hover for the icons */
-.icon:hover .social-icon {
-  transform: scale(1.2);
-}
-
-.icon-text {
-  margin-top: 10px;
-  font-size: 14px;
-  color: #000000;
-  text-transform: capitalize;
-  text-align: center;
-}
-
-/* Time left display styling */
-#timeleft {
-  font-size: 20px;
-  margin-top: 30px;
-  display: none;
-}
-
-/* Contact Us Section styling */
-.contact-section {
-  margin-top: 40px;
-  text-align: left;
-  padding: 20px;
-  background-color: #f9f9f9;
-  border-radius: 10px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-}
-
-.contact-section h2 {
-  font-size: 24px;
-  color: #333;
-}
-
-.contact-section form {
-  display: flex;
-  flex-direction: column;
-}
-
-.contact-section label {
-  margin-bottom: 8px;
-  font-size: 16px;
-}
-
-.contact-section input,
-.contact-section textarea {
-  padding: 10px;
-  margin-bottom: 10px;
-  font-size: 14px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-}
-
-.contact-section button {
-  padding: 10px 20px;
-  background-color: #007bff;
+/* Styling for the cookie consent banner */
+#cookie-consent-banner {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: #333;
   color: white;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 14px;
+  z-index: 9999;
+  display: none; /* Initially hidden */
+}
+
+/* Cookie text */
+#cookie-consent-text {
+  flex-grow: 1;
+}
+
+/* Cookie buttons */
+#cookie-buttons {
+  display: flex;
+  gap: 10px;
+}
+
+/* Button styles */
+#cookie-buttons button {
+  padding: 10px 20px;
+  background-color: #ffbb80;
   border: none;
   border-radius: 5px;
   cursor: pointer;
-  font-size: 16px;
+  transition: background-color 0.3s ease;
 }
 
-.contact-section button:hover {
-  background-color: #0056b3;
+#cookie-buttons button:hover {
+  background-color: #ff8c00;
 }
 
-/* Fix canvas positioning to ensure it always stays visible */
-canvas {
-  position: fixed !important; /* Ensure it is fixed relative to the viewport */
+#cookie-buttons button:focus {
+  outline: none;
+}
+
+/* Cookie management modal */
+#cookie-management-modal {
+  position: fixed;
   top: 0;
   left: 0;
-  pointer-events: none; /* Prevent the canvas from blocking interactions */
-  z-index: 9999; /* Ensure it is always on top of other elements */
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.7);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 10000;
+}
+
+/* Modal content */
+.modal-content {
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  max-width: 400px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Cookie options */
+.cookie-option {
+  margin: 10px 0;
+}
+
+/* Modal buttons */
+.modal-buttons button {
+  padding: 10px 20px;
+  background-color: #ffbb80;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin: 10px;
+}
+
+.modal-buttons button:hover {
+  background-color: #ff8c00;
 }
