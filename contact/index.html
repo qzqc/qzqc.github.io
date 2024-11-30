@@ -66,38 +66,6 @@
             color: #333;
         }
 
-        .contact-form {
-            max-width: 600px;
-            margin: 0 auto;
-            background-color: #fff;
-            padding: 30px;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
-
-        .contact-form input[type="email"],
-        .contact-form textarea {
-            width: 100%;
-            padding: 10px;
-            margin: 10px 0;
-            border: 1px solid #ddd;
-            border-radius: 4px;
-        }
-
-        .contact-form input[type="submit"] {
-            background-color: #333;
-            color: #fff;
-            padding: 10px 20px;
-            border: none;
-            cursor: pointer;
-            border-radius: 4px;
-            font-size: 16px;
-        }
-
-        .contact-form input[type="submit"]:hover {
-            background-color: #555;
-        }
-
         .team-section {
             margin-top: 50px;
             background-color: #fff;
@@ -109,11 +77,23 @@
         .team-member {
             display: flex;
             justify-content: space-between;
-            margin-bottom: 20px;
+            margin-bottom: 30px;
+            align-items: center;
+        }
+
+        .team-member img {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            margin-right: 20px;
         }
 
         .team-member h3 {
             margin: 0;
+        }
+
+        .team-member p {
+            margin: 5px 0;
         }
 
         footer {
@@ -138,34 +118,27 @@
 
     <main>
         <h1>Contact Us</h1>
-        <p>If you have any questions, feel free to reach out to us through the form below.</p>
-
-        <div class="contact-form">
-            <form action="#" method="POST">
-                <label for="email">Your Email</label>
-                <input type="email" id="email" name="email" required placeholder="Enter your email" />
-
-                <label for="message">Your Message</label>
-                <textarea id="message" name="message" rows="4" required placeholder="Write your message here"></textarea>
-
-                <input type="submit" value="Send Message" />
-            </form>
-        </div>
+        <p>If you need to reach out, here are the contact details of the key people:</p>
 
         <div class="team-section">
-            <h2>Meet Our Team</h2>
-            
             <div class="team-member">
+                <img src="assets/photo/kaansakalli.jpg" alt="Kaan Sakallı">
                 <div>
                     <h3>Kaan Sakallı</h3>
-                    <p>Position: Owner of qzqc.com.tr</p>
+                    <p>Owner of qzqc.com.tr</p>
+                    <p>Email: info@qzqc.com.tr</p>
+                    <p>School: <a href="https://sisli.meb.k12.tr" target="_blank">Şişli Mesleki ve Tekniki Anadolu Lisesi</a></p>
                 </div>
             </div>
 
             <div class="team-member">
+                <img src="assets/photo/keremakyuz.jpg" alt="Kerem Akyüz">
                 <div>
                     <h3>Kerem Akyüz</h3>
-                    <p>Position: Owner of Aktsoy A.A.</p>
+                    <p>Owner of Aktsoy A.A.</p>
+                    <p>Email: info@qzqc.com.tr</p>
+                    <p>Phone: +90 533 348 1851</p>
+                    <p>School: <a href="https://sisli.meb.k12.tr" target="_blank">Şişli Mesleki ve Tekniki Anadolu Lisesi</a></p>
                 </div>
             </div>
         </div>
