@@ -3,94 +3,108 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Artists</title>
+    <title>Artists - QZQC.com.tr Recordings</title>
+
+    <!-- Faviconlar -->
+    <link rel="icon" href="assets/favicon_io/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="assets/favicon_io/favicon-16x16.png" sizes="16x16" type="image/png">
+    <link rel="icon" href="assets/favicon_io/favicon-32x32.png" sizes="32x32" type="image/png">
+    <link rel="apple-touch-icon" href="assets/favicon_io/apple-touch-icon.png">
+    <link rel="icon" href="assets/favicon_io/android-chrome-192x192.png" sizes="192x192" type="image/png">
+    <link rel="icon" href="assets/favicon_io/android-chrome-512x512.png" sizes="512x512" type="image/png">
+
+    <!-- Başka stil ve tasarım kaynakları, varsa onları da ekleyin -->
     <style>
-        /* Basit stil */
         body {
             font-family: Arial, sans-serif;
-            background-color: #f4f4f9;
-            color: #333;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
         }
 
-        header {
+        .header {
+            background-color: #333;
+            color: white;
             text-align: center;
-            padding: 20px;
+            padding: 15px 0;
         }
 
-        main {
-            padding: 50px 20px;
+        .main-content {
+            padding: 30px;
+            max-width: 1000px;
+            margin: 0 auto;
         }
 
-        .artist-section {
+        .artist-list {
             display: flex;
-            flex-direction: column;
-            align-items: center;
-            margin-top: 30px;
+            justify-content: center;
+            margin-top: 20px;
+            flex-wrap: wrap;
         }
 
-        .artist {
+        .artist-card {
             background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 5px;
             padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin: 10px;
+            width: 250px;
             text-align: center;
-            margin: 10px 0;
-            width: 70%;
         }
 
-        .artist h3 {
-            margin: 10px 0;
-        }
-
-        .artist a {
+        .artist-card a {
             text-decoration: none;
-            color: #007bff;
+            color: #333;
             font-weight: bold;
         }
 
-        .artist a:hover {
-            text-decoration: underline;
-        }
-
-        footer {
+        .footer {
+            background-color: #333;
+            color: white;
             text-align: center;
-            padding: 20px;
-            background-color: transparent;
-            color: #000;
-            margin-top: 50px; /* Copyright'ı alttan çekmek için margin ekledim */
+            padding: 10px 0;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
         }
     </style>
 </head>
 <body>
 
-    <header>
-        <h1>Artists</h1>
-    </header>
+    <div class="header">
+        <h1>Sanatçılar</h1>
+        <p>QZQC.com.tr Recordings ve Aktsoy A.A. Sanatçıları</p>
+    </div>
 
-    <main>
-        <div class="artist-section">
-            <!-- qzqc Artist -->
-            <div class="artist">
-                <h3><a href="/sanatci-qzqc">qzqc</a></h3>
-                <p>Artist under qzqc.com.tr Recordings</p>
+    <div class="main-content">
+        <h2>Sanatçılarımız</h2>
+        <div class="artist-list">
+            <!-- QZQC Sanatçısı -->
+            <div class="artist-card">
+                <h3><a href="/sanatci-qzqc">QZQC</a></h3>
+                <p>Sanatçı: qzqc</p>
+                <p>qzqc.com.tr sanatçısıdır.</p>
             </div>
 
-            <!-- Aktsoy A.A. Artists -->
-            <div class="artist">
+            <!-- Aktsoy A.A. Sanatçısı 1 -->
+            <div class="artist-card">
                 <h3><a href="/sanatci-alperenxarisoy">Alperen Xarisoy</a></h3>
-                <p>Artist under Aktsoy A.A.</p>
+                <p>Sanatçı: alperenxarisoy</p>
+                <p>Aktsoy A.A.</p>
             </div>
 
-            <div class="artist">
+            <!-- Aktsoy A.A. Sanatçısı 2 -->
+            <div class="artist-card">
                 <h3><a href="/sanatci-wenzio">Wenzio</a></h3>
-                <p>Artist under Aktsoy A.A.</p>
+                <p>Sanatçı: wenzio</p>
+                <p>Aktsoy A.A.</p>
             </div>
         </div>
-    </main>
+    </div>
 
-    <footer>
-        <p>&copy; 2024 qzqc.com.tr Recordings. All rights reserved.</p>
-    </footer>
+    <div class="footer">
+        <p>© 2024 qzqc.com.tr | Tüm Haklar Saklıdır</p>
+    </div>
 
 </body>
 </html>
