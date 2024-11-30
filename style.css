@@ -4,6 +4,7 @@ body {
   padding: 0;
   font-family: Arial, sans-serif;
   background-color: #ffffff; /* White background */
+  overflow: hidden; /* Prevent scrollbars if they appear */
 }
 
 /* Container to center content */
@@ -43,6 +44,7 @@ h1 {
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
 }
 
+/* Icon hover effect */
 .icon:hover {
   background-color: #ffbb80; /* Icon hover background color */
 }
@@ -51,10 +53,17 @@ h1 {
   color: #ffffff; /* Icon text color change on hover */
 }
 
-.icon i {
-  font-size: 40px;
-  color: #000000;
+/* New icon styles for images */
+.social-icon {
+  width: 50px; /* Adjust size */
+  height: 50px;
   margin-top: 20px;
+  transition: transform 0.3s ease-in-out;
+}
+
+/* Scale effect on hover for the icons */
+.icon:hover .social-icon {
+  transform: scale(1.2);
 }
 
 .icon-text {
@@ -70,4 +79,13 @@ h1 {
   font-size: 20px;
   margin-top: 30px;
   display: none;
+}
+
+/* Fix canvas positioning to ensure it always stays visible */
+canvas {
+  position: fixed !important; /* Ensure it is fixed relative to the viewport */
+  top: 0;
+  left: 0;
+  pointer-events: none; /* Prevent the canvas from blocking interactions */
+  z-index: 9999; /* Ensure it is always on top of other elements */
 }
