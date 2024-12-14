@@ -26,12 +26,12 @@
             margin: 0;
             padding: 0;
             background-color: #4e7084;
-            color: #ede4e;
+            color: #ede4e4;
         }
 
         header {
             background-color: #4e7084;
-            color: #4e7084;
+            color: #ede4e4;
             padding: 20px 0;
             text-align: center;
         }
@@ -42,7 +42,7 @@
         }
 
         h1 {
-            color: #4e7084;
+            color: #ede4e4;
         }
 
         .team-section {
@@ -60,22 +60,37 @@
         .team-member h3 {
             margin: 0;
             text-align: center; /* Center the name */
+            color: #ede4e4;
         }
 
         .team-member p {
             margin: 5px 0;
             text-align: center; /* Center the contact details */
+            color: #ede4e4;
         }
 
         footer {
             text-align: center;
             padding: 20px 0;
             background-color: #4e7084; /* Removed the black bar */
-            color: #f4f4f4; /* Set text color to black */
+            color: #ede4e4; /* Set text color to #ede4e4 */
+        }
+
+        /* Favicon link */
+        .favicon-link {
+            display: block;
+            width: 32px;
+            height: 32px;
+            margin: 0 auto;
+            background: url('/assets/favicon_io/android-chrome-512x512.png') no-repeat center center;
+            background-size: contain;
         }
     </style>
 </head>
 <body>
+    <header>
+        <a href="/" class="favicon-link"></a>
+    </header>
     <main>
         <h1>Contact Us</h1>
         <p>If you need to reach out, here are the contact details of the key people:</p>
