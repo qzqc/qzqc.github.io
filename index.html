@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>qzqc Recordings</title>
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="/assets/favicon_io/android-chrome-512x512.png">
+  
+  <!-- Link to cursor-effects library -->
+  <script src="./assets/js/browser.js"></script>
+
+  <!-- External Stylesheet -->
+  <link rel="stylesheet" href="style.css">
+  <style>
+    @font-face {
+      font-family: 'SteagalW01Bold';
+      src: url('/assets/fonts/Steagal W01 Bold.ttf') format('truetype'),
+           url('/assets/fonts/Steagal W01 Bold.otf') format('opentype');
+      font-weight: bold;
+      font-style: normal;
+    }
+    body {
+      font-family: 'SteagalW01Bold', Arial, sans-serif;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>qzqc Recordings</h1>
+    
+    <div class="icon-container">
+      <a href="/contact" class="icon">
+        <img src="assets/icons/contact.svg" alt="Contact Us" class="social-icon"><span class="icon-text">Contact Us</span>
+      </a>
+      <a href="/artists" class="icon">
+        <img src="assets/icons/artists.svg" alt="Artists" class="social-icon"><span class="icon-text">Artists</span>
+      </a>
+    </div>
+  </div>
+
+  <!-- Cookies Text -->
+  <div id="cookies-text">
+    By using this site, you agree to our cookie policy.
+    <a href="/privacy-policy" class="learn-more">Learn More</a>
+  </div>
+
+  <!-- External JavaScript -->
+  <script src="script.js"></script>
+
+  <script>
+    // Wait for the page to fully load before initializing the effect
+    window.addEventListener("load", () => {
+      // Initialize the Fairy Dust Cursor Effect
+      new cursoreffects.fairyDustCursor({
+        colors: ["#ff0000", "#00ff00", "#0000ff"] // Custom colors for the dust particles
+      });
+    });
+  </script>
+</body>
+</html>
