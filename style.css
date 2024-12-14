@@ -1,7 +1,7 @@
 @font-face {
   font-family: 'SteagalW01Bold';
-  src: url('assets/fonts/SteagalW01Bold.ttf') format('truetype'),
-       url('assets/fonts/SteagalW01Bold.otf') format('opentype');
+  src: url('assets/fonts/Steagal W01 Bold.ttf') format('truetype'),
+       url('assets/fonts/Steagal W01 Bold.otf') format('opentype');
   font-weight: bold;
   font-style: normal;
 }
@@ -204,4 +204,25 @@ body::-webkit-scrollbar {
 body {
   -ms-overflow-style: none;  /* IE and Edge */
   scrollbar-width: none;  /* Firefox */
+}
+
+/* Section background colors */
+#home {
+  background-color: #ffffff; /* White background */
+  padding: 100px 20px;
+}
+
+#artists {
+  background-color: #f4f4f4; /* Light grey background */
+  padding: 100px 20px;
+}
+
+#contact {
+  background-color: #e0e0e0; /* Grey background */
+  padding: 100px 20px;
+}
+
+#privacy {
+  background-color: #cccccc; /* Darker grey background */
+  padding: 100px 20px;
 }
