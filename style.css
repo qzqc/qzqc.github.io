@@ -1,8 +1,16 @@
+@font-face {
+  font-family: 'SteagalW01Bold';
+  src: url('assets/fonts/SteagalW01Bold.ttf') format('truetype'),
+       url('assets/fonts/SteagalW01Bold.otf') format('opentype');
+  font-weight: bold;
+  font-style: normal;
+}
+
 /* General body styles */
 body {
   margin: 0;
   padding: 0;
-  font-family: Arial, sans-serif;
+  font-family: 'SteagalW01Bold', Arial, sans-serif; /* Apply custom font */
   background-color: #ffffff; /* White background */
   overflow: hidden; /* Prevent scrollbars if they appear */
   position: relative; /* Ensure relative positioning to contain the canvas */
