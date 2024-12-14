@@ -1,15 +1,62 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <meta http-equiv="refresh" content="3; url=/">
-  <title>404 Error, Redirecting...</title>
-  <script type="text/javascript">
-    setTimeout(function() {
-      window.location.href = "/";
-    }, 3000); // 3000 milliseconds = 3 seconds
-  </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>404 Not Found</title>
+    <link rel="icon" type="image/png" href="/assets/favicon_io/android-chrome-512x512.png">
+    <style>
+        @font-face {
+            font-family: 'SteagalW01Bold';
+            src: url('/assets/fonts/Steagal W01 Bold.ttf') format('truetype'),
+                 url('/assets/fonts/Steagal W01 Bold.otf') format('opentype');
+            font-weight: bold;
+            font-style: normal;
+        }
+
+        body {
+            font-family: 'SteagalW01Bold', Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            text-align: center;
+        }
+
+        .logo {
+            width: 540px; /* Adjusted width */
+            height: 295px; /* Adjusted height */
+            background-image: url('/assets/logo.png');
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+            margin-bottom: 20px;
+        }
+
+        h1 {
+            font-size: 48px;
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        p {
+            font-size: 18px;
+            color: #666;
+        }
+    </style>
+    <script type="text/javascript">
+        setTimeout(function() {
+            window.location.href = "/";
+        }, 8000); // 8000 milliseconds = 8 seconds
+    </script>
 </head>
 <body>
-  <p>You will be redirected to the home page in a few seconds. If not, click <a href="/">here</a>.</p>
+    <div class="logo"></div>
+    <h1>404 Not Found</h1>
+    <p>You will be redirected to the home page in a few seconds. If not, click <a href="/">here</a>.</p>
 </body>
 </html>
