@@ -62,7 +62,7 @@ h1 {
 
 /* Icon hover effect */
 .icon:hover {
-  background-color: #ffbb80; /* Icon hover background color */
+  background-color: #4e7084; /* Icon hover background color */
 }
 
 .icon:hover .icon-text {
