@@ -12,12 +12,12 @@ body {
   padding: 0;
   font-family: 'SteagalW01Bold', Arial, sans-serif; /* Apply custom font */
   background-color: #ffffff; /* White background */
-  overflow: hidden; /* Prevent scrollbars if they appear */
   position: relative; /* Ensure relative positioning to contain the canvas */
   text-align: center; /* Center the text globally */
   display: flex;
   flex-direction: column;
   min-height: 100vh;
+  overflow: hidden; /* Hide scrollbar */
 }
 
 /* Navbar styles */
@@ -129,11 +129,11 @@ h1 {
 }
 
 /* Hover effect for Contact Us and Artists links */
-a[href="/contact"], a[href="/artists"] {
+a[href="#contact"], a[href="#artists"] {
   color: inherit; /* Use the default link color */
   text-decoration: none;
 }
-a[href="/contact"]:hover, a[href="/artists"]:hover {
+a[href="#contact"]:hover, a[href="#artists"]:hover {
   color: #4e7084; /* Change color to #4e7084 on hover */
 }
 
@@ -195,4 +195,13 @@ canvas {
 
 .footer-section a:hover {
   text-decoration: underline;
+}
+
+/* Hide scrollbar */
+body::-webkit-scrollbar {
+  display: none;
+}
+body {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
 }
