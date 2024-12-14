@@ -1,0 +1,136 @@
+Here is the CSS file specifically for the "Contact Us" page, including the custom font "Steagal W01 Bold":
+
+### contact-us.css
+```css
+@font-face {
+  font-family: 'SteagalW01Bold';
+  src: url('assets/fonts/SteagalW01Bold.ttf') format('truetype'),
+       url('assets/fonts/SteagalW01Bold.otf') format('opentype');
+  font-weight: bold;
+  font-style: normal;
+}
+
+/* General body styles */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'SteagalW01Bold', Arial, sans-serif; /* Apply custom font */
+  background-color: #ffffff; /* White background */
+  overflow: hidden; /* Prevent scrollbars if they appear */
+  position: relative; /* Ensure relative positioning to contain the canvas */
+  text-align: center; /* Center the text globally */
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* Container to center content */
+.container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  text-align: center; /* Ensure content inside the container is centered */
+  flex-grow: 1; /* Make sure container grows to fill available space */
+}
+
+/* Title styling */
+h1 {
+  margin-top: 30px;
+  color: #333;
+  font-size: 24px;
+  text-align: center; /* Center align the title */
+}
+
+/* Icon container layout */
+.icon-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+/* Individual icon styling */
+.icon {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  margin: 10px;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  transition: all 0.3s ease-in-out;
+  background-color: #f1f1f1; /* Background for icons */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+/* Icon hover effect */
+.icon:hover {
+  background-color: #ffbb80; /* Icon hover background color */
+}
+
+.icon:hover .icon-text {
+  color: #ffffff; /* Icon text color change on hover */
+}
+
+/* New icon styles for images */
+.social-icon {
+  width: 50px; /* Adjust size */
+  height: 50px;
+  margin-top: 20px;
+  transition: transform 0.3s ease-in-out;
+}
+
+/* Scale effect on hover for the icons */
+.icon:hover .social-icon {
+  transform: scale(1.2);
+}
+
+.icon-text {
+  margin-top: 10px;
+  font-size: 14px;
+  color: #000000;
+  text-transform: capitalize;
+  text-align: center;
+}
+
+/* Cookies text styling */
+#cookies-text {
+  font-size: 14px;
+  color: #555;
+  text-align: center;
+  position: fixed;
+  bottom: 10px;
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.9); /* Slight background to make text readable */
+  padding: 10px 0;
+  box-shadow: 0 -1px 10px rgba(0, 0, 0, 0.1);
+}
+
+.learn-more {
+  color: #007bff; /* Blue color for the link */
+  text-decoration: none;
+  font-weight: bold;
+  margin-left: 5px;
+}
+
+.learn-more:hover {
+  text-decoration: underline; /* Underline on hover */
+}
+
+/* Time left display styling */
+#timeleft {
+  font-size: 20px;
+  margin-top: 30px;
+  display: none;
+}
+
+/* Fix canvas positioning to ensure it always stays visible */
+canvas {
+  position: fixed !important; /* Ensure it is fixed relative to the viewport */
+  top: 0;
+  left: 0;
+  pointer-events: none; /* Prevent the canvas from blocking interactions */
+  z-index: 9999; /* Ensure it is always on top of other elements */
+}
+```
