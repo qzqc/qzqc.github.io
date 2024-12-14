@@ -1,106 +1,113 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Aktsoy - qzqc Recordings</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aktsoy - qzqc Recordings</title>
 
-    <!-- Favicon -->
-    <link rel="icon" type="image/png" href="/assets/favicon_io/android-chrome-512x512.png">
-    <!-- Styles -->
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f4f4;
-        }
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="/assets/favicon_io/android-chrome-512x512.png">
+  <!-- Styles -->
+  <style>
+    @font-face {
+      font-family: 'SteagalW01Bold';
+      src: url('/assets/fonts/Steagal W01 Bold.ttf') format('truetype'),
+           url('/assets/fonts/Steagal W01 Bold.otf') format('opentype');
+      font-weight: bold;
+      font-style: normal;
+    }
+    body {
+      font-family: 'SteagalW01Bold', Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f4f4;
+    }
 
-        .header {
-            background-color: #333;
-            color: white;
-            text-align: center;
-            padding: 15px 0;
-        }
+    .header {
+      background-color: #333;
+      color: white;
+      text-align: center;
+      padding: 15px 0;
+    }
 
-        .main-content {
-            padding: 30px;
-            max-width: 1000px;
-            margin: 0 auto;
-        }
+    .main-content {
+      padding: 30px;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
 
-        .artist-list {
-            display: flex;
-            justify-content: center;
-            margin-top: 20px;
-            flex-wrap: wrap;
-        }
+    .artist-list {
+      display: flex;
+      justify-content: center;
+      margin-top: 20px;
+      flex-wrap: wrap;
+    }
 
-        .artist-card {
-            background-color: #fff;
-            border: 1px solid #ddd;
-            border-radius: 5px;
-            padding: 20px;
-            margin: 10px;
-            width: 250px;
-            text-align: center;
-        }
+    .artist-card {
+      background-color: #fff;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      padding: 20px;
+      margin: 10px;
+      width: 250px;
+      text-align: center;
+    }
 
-        .artist-card a {
-            text-decoration: none;
-            color: #333;
-            font-weight: bold;
-        }
+    .artist-card a {
+      text-decoration: none;
+      color: #333;
+      font-weight: bold;
+    }
 
-        .footer {
-            background-color: #333;
-            color: white;
-            text-align: center;
-            padding: 10px 0;
-            position: fixed;
-            width: 100%;
-            bottom: 0;
-        }
-    </style>
+    .footer {
+      background-color: #333;
+      color: white;
+      text-align: center;
+      padding: 10px 0;
+      position: fixed;
+      width: 100%;
+      bottom: 0;
+    }
+  </style>
 </head>
 <body>
 
-    <div class="header">
-        <h1>Artists</h1>
-        <p>qzqc.com.tr Recordings and Aktsoy A.A. Artists</p>
+  <div class="header">
+    <h1>Artists</h1>
+    <p>qzqc.com.tr Recordings and Aktsoy A.A. Artists</p>
+  </div>
+
+  <div class="main-content">
+    <h2>Our Artists</h2>
+    
+    <div class="artist-list">
+      <!-- qzqc.com.tr Artist -->
+      <div class="artist-card">
+        <h3><a href="/qzqc">qzqc</a></h3>
+        <p>Songwriter/Producer</p>
+        <p>qzqc.com.tr artist.</p>
+      </div>
+
+      <!-- Aktsoy A.A. Artist 1 -->
+      <div class="artist-card">
+        <h3><a href="/alperenxarisoy">alperenxarisoy</a></h3>
+        <p>Singer/Performer</p>
+        <p>Aktsoy A.A. artist.</p>
+      </div>
+
+      <!-- Aktsoy A.A. Artist 2 -->
+      <div class="artist-card">
+        <h3><a href="/wenzio">wenzio</a></h3>
+        <p>Singer/Performer</p>
+        <p>Aktsoy A.A. artist.</p>
+      </div>
     </div>
+  </div>
 
-    <div class="main-content">
-        <h2>Our Artists</h2>
-        
-        <div class="artist-list">
-            <!-- qzqc.com.tr Artist -->
-            <div class="artist-card">
-                <h3><a href="/qzqc">qzqc</a></h3>
-                <p>Songwriter/Producer</p>
-                <p>qzqc.com.tr artist.</p>
-            </div>
-
-            <!-- Aktsoy A.A. Artist 1 -->
-            <div class="artist-card">
-                <h3><a href="/alperenxarisoy">alperenxarisoy</a></h3>
-                <p>Singer/Performer</p>
-                <p>Aktsoy A.A. artist.</p>
-            </div>
-
-            <!-- Aktsoy A.A. Artist 2 -->
-            <div class="artist-card">
-                <h3><a href="/wenzio">wenzio</a></h3>
-                <p>Singer/Performer</p>
-                <p>Aktsoy A.A. artist.</p>
-            </div>
-        </div>
-    </div>
-
-    <div class="footer">
-  <p>&copy; 2025 qzqc Recordings | All rights reserved.</p>
-  <p>&copy; 2025 Aktsoy A.A. | All rights reserved.</p>
-    </div>
+  <div class="footer">
+    <p>&copy; 2025 qzqc Recordings | All rights reserved.</p>
+    <p>&copy; 2025 Aktsoy A.A. | All rights reserved.</p>
+  </div>
 
 </body>
 </html>
