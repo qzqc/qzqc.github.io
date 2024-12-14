@@ -62,7 +62,7 @@ h1 {
 
 /* Icon hover effect */
 .icon:hover {
-  background-color: #4e7084; /* Icon hover background color */
+  background-color: #ffbb80; /* Icon hover background color */
 }
 
 .icon:hover .icon-text {
@@ -88,6 +88,15 @@ h1 {
   color: #000000;
   text-transform: capitalize;
   text-align: center;
+}
+
+/* Hover effect for Contact Us and Artists links */
+a[href="/contact"], a[href="/artists"] {
+  color: inherit; /* Use the default link color */
+  text-decoration: none;
+}
+a[href="/contact"]:hover, a[href="/artists"]:hover {
+  color: #4e7084; /* Change color to #4e7084 on hover */
 }
 
 /* Cookies text styling */
