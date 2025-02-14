@@ -104,7 +104,7 @@
     </style>
 </head>
 <body>
-    <div class="header">
+    <div class="header" id="header">
         <h1>Donate</h1>
         <p>Support us with your donation</p>
     </div>
@@ -133,7 +133,9 @@
                 <img src="https://cdn.buymeacoffee.com/buttons/v2/default-blue.png" class="donation-button" alt="Donate with BuyMeACoffee">
             </a>
             <!-- Single Cryptocurrency Donation Button -->
-            <button onclick="showCryptoPopup()">Donate with Cryptocurrency</button>
+            <button onclick="showCryptoPopup()">
+                <img src="/assets/donate/paypal/grey.svg" class="donation-button" alt="Donate with Cryptocurrency">
+            </button>
         </div>
     </div>
 
@@ -141,12 +143,24 @@
         <button class="close-button" onclick="hideCryptoPopup()">X</button>
         <h2>Donate with Cryptocurrency</h2>
         <div class="crypto-options">
-            <button onclick="selectCrypto('bitcoin')">Bitcoin Lightning</button>
-            <button onclick="selectCrypto('ethereum')">Ethereum</button>
-            <button onclick="selectCrypto('litecoin')">Litecoin</button>
-            <button onclick="selectCrypto('dogecoin')">Dogecoin</button>
-            <button onclick="selectCrypto('tron')">Tron</button>
-            <button onclick="selectCrypto('kraken')">Kraken Pay</button>
+            <button onclick="selectCrypto('bitcoin')">
+                <img src="https://github.com/yadomi/doge-button/blob/main/images/bitcoin.png?raw=true" alt="Bitcoin">
+            </button>
+            <button onclick="selectCrypto('ethereum')">
+                <img src="https://github.com/yadomi/doge-button/blob/main/images/ethereum.png?raw=true" alt="Ethereum">
+            </button>
+            <button onclick="selectCrypto('litecoin')">
+                <img src="https://github.com/yadomi/doge-button/blob/main/images/litecoin.png?raw=true" alt="Litecoin">
+            </button>
+            <button onclick="selectCrypto('dogecoin')">
+                <img src="https://github.com/yadomi/doge-button/blob/main/images/dogecoin.png?raw=true" alt="Dogecoin">
+            </button>
+            <button onclick="selectCrypto('tron')">
+                <img src="https://github.com/yadomi/doge-button/blob/main/images/tron.png?raw=true" alt="Tron">
+            </button>
+            <button onclick="selectCrypto('kraken')">
+                <img src="https://github.com/yadomi/doge-button/blob/main/images/kraken.png?raw=true" alt="Kraken Pay">
+            </button>
         </div>
         <div class="crypto-details" id="crypto-details" style="display:none;">
             <img id="crypto-logo" src="" alt="Crypto Logo">
@@ -196,6 +210,7 @@
         function showCryptoPopup() {
             document.getElementById('crypto-popup').classList.add('active');
             document.getElementById('main-content').classList.add('blur-background');
+            document.getElementById('header').classList.add('blur-background');
             document.getElementById('crypto-details').style.display = 'none';
         }
 
@@ -210,6 +225,7 @@
         function hideCryptoPopup() {
             document.getElementById('crypto-popup').classList.remove('active');
             document.getElementById('main-content').classList.remove('blur-background');
+            document.getElementById('header').classList.remove('blur-background');
         }
     </script>
 </body>
