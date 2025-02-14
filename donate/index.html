@@ -69,6 +69,25 @@
                 color: white;
             }
         }
+        .crypto-popup {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: white;
+            padding: 20px;
+            border: 1px solid #ccc;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            z-index: 1000;
+        }
+        .crypto-popup.active {
+            display: block;
+        }
+        .crypto-popup img {
+            width: 50px;
+            height: 50px;
+        }
     </style>
 </head>
 <body>
@@ -100,14 +119,67 @@
             <a href="https://www.buymeacoffee.com/qzqc" target="_blank">
                 <img src="https://cdn.buymeacoffee.com/buttons/v2/default-blue.png" class="donation-button" alt="Donate with BuyMeACoffee">
             </a>
-            <a href="https://www.paypal.com/donate?hosted_button_id=YOUR_BUTTON_ID" target="_blank">
-                <img src="/assets/donate/paypal/grey.svg" class="donation-button" alt="Donate with Ko-Fi">
-            </a>
+            <!-- Cryptocurrency Donation Buttons -->
+            <button onclick="showCryptoPopup('bitcoin')">Donate with Bitcoin Lightning</button>
+            <button onclick="showCryptoPopup('ethereum')">Donate with Ethereum</button>
+            <button onclick="showCryptoPopup('litecoin')">Donate with Litecoin</button>
+            <button onclick="showCryptoPopup('dogecoin')">Donate with Dogecoin</button>
+            <button onclick="showCryptoPopup('tron')">Donate with Tron</button>
         </div>
+    </div>
+
+    <div class="crypto-popup" id="crypto-popup">
+        <h2>Donate with <span id="crypto-name"></span></h2>
+        <img id="crypto-logo" src="" alt="Crypto Logo">
+        <p>Address: <span id="crypto-address"></span></p>
+        <button onclick="hideCryptoPopup()">Close</button>
     </div>
 
     <div class="footer">
         <p>&copy; 2025 qzqc Recordings | All rights reserved.</p>
     </div>
+
+    <script>
+        const cryptoData = {
+            bitcoin: {
+                name: 'Bitcoin Lightning',
+                logo: 'path/to/bitcoin-logo.png',
+                address: 'YourBitcoinLightningAddress'
+            },
+            ethereum: {
+                name: 'Ethereum',
+                logo: 'path/to/ethereum-logo.png',
+                address: 'YourEthereumAddress'
+            },
+            litecoin: {
+                name: 'Litecoin',
+                logo: 'path/to/litecoin-logo.png',
+                address: 'YourLitecoinAddress'
+            },
+            dogecoin: {
+                name: 'Dogecoin',
+                logo: 'path/to/dogecoin-logo.png',
+                address: 'YourDogecoinAddress'
+            },
+            tron: {
+                name: 'Tron',
+                logo: 'path/to/tron-logo.png',
+                address: 'YourTronAddress'
+            }
+        };
+
+        function showCryptoPopup(crypto) {
+            const popup = document.getElementById('crypto-popup');
+            const cryptoInfo = cryptoData[crypto];
+            document.getElementById('crypto-name').innerText = cryptoInfo.name;
+            document.getElementById('crypto-logo').src = cryptoInfo.logo;
+            document.getElementById('crypto-address').innerText = cryptoInfo.address;
+            popup.classList.add('active');
+        }
+
+        function hideCryptoPopup() {
+            document.getElementById('crypto-popup').classList.remove('active');
+        }
+    </script>
 </body>
 </html>
