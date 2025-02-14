@@ -55,6 +55,27 @@
             height: auto;
             border-radius: 0;
         }
+        .crypto-options {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+        }
+        .crypto-option {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 100px;
+            text-align: center;
+        }
+        .crypto-option img {
+            width: 50px;
+            height: 50px;
+        }
+        .crypto-option span {
+            margin-top: 5px;
+            font-size: 14px;
+        }
         @keyframes menColors {
             0% { filter: hue-rotate(0deg); }
             33% { filter: hue-rotate(120deg); }
@@ -94,10 +115,6 @@
             display: block;
             opacity: 1;
             transform: translate(-50%, -50%) scale(1);
-        }
-        .crypto-popup img {
-            width: 50px;
-            height: 50px;
         }
         .blur-background {
             filter: blur(5px);
@@ -153,24 +170,30 @@
         <button class="close-button" onclick="hideCryptoPopup()">X</button>
         <h2>Donate with Cryptocurrency</h2>
         <div class="crypto-options">
-            <button onclick="selectCrypto('bitcoin')">
-                <img src="/assets/donate/paypal/grey.svg" alt="Bitcoin">
-            </button>
-            <button onclick="selectCrypto('ethereum')">
-                <img src="/assets/donate/paypal/grey.svg" alt="Ethereum">
-            </button>
-            <button onclick="selectCrypto('litecoin')">
-                <img src="/assets/donate/paypal/grey.svg" alt="Litecoin">
-            </button>
-            <button onclick="selectCrypto('dogecoin')">
-                <img src="/assets/donate/paypal/grey.svg" alt="Dogecoin">
-            </button>
-            <button onclick="selectCrypto('tron')">
-                <img src="/assets/donate/paypal/grey.svg" alt="Tron">
-            </button>
-            <button onclick="selectCrypto('kraken')">
-                <img src="/assets/donate/paypal/grey.svg" alt="Kraken Pay">
-            </button>
+            <div class="crypto-option" onclick="selectCrypto('bitcoin')">
+                <img src="https://raw.githubusercontent.com/spothq/cryptocurrency-icons/master/svg/color/btc.svg" alt="Bitcoin">
+                <span>Bitcoin</span>
+            </div>
+            <div class="crypto-option" onclick="selectCrypto('ethereum')">
+                <img src="https://raw.githubusercontent.com/spothq/cryptocurrency-icons/master/svg/color/eth.svg" alt="Ethereum">
+                <span>Ethereum</span>
+            </div>
+            <div class="crypto-option" onclick="selectCrypto('litecoin')">
+                <img src="https://raw.githubusercontent.com/spothq/cryptocurrency-icons/master/svg/color/ltc.svg" alt="Litecoin">
+                <span>Litecoin</span>
+            </div>
+            <div class="crypto-option" onclick="selectCrypto('dogecoin')">
+                <img src="https://raw.githubusercontent.com/spothq/cryptocurrency-icons/master/svg/color/doge.svg" alt="Dogecoin">
+                <span>Dogecoin</span>
+            </div>
+            <div class="crypto-option" onclick="selectCrypto('tron')">
+                <img src="https://raw.githubusercontent.com/spothq/cryptocurrency-icons/master/svg/color/trx.svg" alt="Tron">
+                <span>Tron</span>
+            </div>
+            <div class="crypto-option" onclick="selectCrypto('kraken')">
+                <img src="https://raw.githubusercontent.com/spothq/cryptocurrency-icons/master/svg/color/kraken.svg" alt="Kraken Pay">
+                <span>Kraken Pay</span>
+            </div>
         </div>
         <div class="crypto-details" id="crypto-details" style="display:none;">
             <img id="crypto-logo" src="" alt="Crypto Logo">
@@ -187,26 +210,32 @@
         const cryptoData = {
             bitcoin: {
                 name: 'Bitcoin Lightning',
+                logo: 'https://raw.githubusercontent.com/spothq/cryptocurrency-icons/master/svg/color/btc.svg',
                 address: 'YourBitcoinLightningAddress'
             },
             ethereum: {
                 name: 'Ethereum',
+                logo: 'https://raw.githubusercontent.com/spothq/cryptocurrency-icons/master/svg/color/eth.svg',
                 address: 'YourEthereumAddress'
             },
             litecoin: {
                 name: 'Litecoin',
+                logo: 'https://raw.githubusercontent.com/spothq/cryptocurrency-icons/master/svg/color/ltc.svg',
                 address: 'YourLitecoinAddress'
             },
             dogecoin: {
                 name: 'Dogecoin',
+                logo: 'https://raw.githubusercontent.com/spothq/cryptocurrency-icons/master/svg/color/doge.svg',
                 address: 'YourDogecoinAddress'
             },
             tron: {
                 name: 'Tron',
+                logo: 'https://raw.githubusercontent.com/spothq/cryptocurrency-icons/master/svg/color/trx.svg',
                 address: 'YourTronAddress'
             },
             kraken: {
                 name: 'Kraken Pay',
+                logo: 'https://raw.githubusercontent.com/spothq/cryptocurrency-icons/master/svg/color/kraken.svg',
                 email: 'kkaann@my.com'
             }
         };
@@ -225,7 +254,7 @@
 
         function selectCrypto(crypto) {
             const cryptoInfo = cryptoData[crypto];
-            document.getElementById('crypto-logo').src = '';
+            document.getElementById('crypto-logo').src = cryptoInfo.logo;
             document.getElementById('crypto-address').innerText = cryptoInfo.address || '';
             document.getElementById('crypto-email').innerText = cryptoInfo.email || '';
             document.getElementById('crypto-details').style.display = 'block';
