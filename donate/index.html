@@ -119,19 +119,26 @@
             <a href="https://www.buymeacoffee.com/qzqc" target="_blank">
                 <img src="https://cdn.buymeacoffee.com/buttons/v2/default-blue.png" class="donation-button" alt="Donate with BuyMeACoffee">
             </a>
-            <!-- Cryptocurrency Donation Buttons -->
-            <button onclick="showCryptoPopup('bitcoin')">Donate with Bitcoin Lightning</button>
-            <button onclick="showCryptoPopup('ethereum')">Donate with Ethereum</button>
-            <button onclick="showCryptoPopup('litecoin')">Donate with Litecoin</button>
-            <button onclick="showCryptoPopup('dogecoin')">Donate with Dogecoin</button>
-            <button onclick="showCryptoPopup('tron')">Donate with Tron</button>
+            <!-- Single Cryptocurrency Donation Button -->
+            <button onclick="showCryptoPopup()">Donate with Cryptocurrency</button>
         </div>
     </div>
 
     <div class="crypto-popup" id="crypto-popup">
-        <h2>Donate with <span id="crypto-name"></span></h2>
-        <img id="crypto-logo" src="" alt="Crypto Logo">
-        <p>Address: <span id="crypto-address"></span></p>
+        <h2>Donate with Cryptocurrency</h2>
+        <div class="crypto-options">
+            <button onclick="selectCrypto('bitcoin')">Bitcoin Lightning</button>
+            <button onclick="selectCrypto('ethereum')">Ethereum</button>
+            <button onclick="selectCrypto('litecoin')">Litecoin</button>
+            <button onclick="selectCrypto('dogecoin')">Dogecoin</button>
+            <button onclick="selectCrypto('tron')">Tron</button>
+            <button onclick="selectCrypto('kraken')">Kraken Pay</button>
+        </div>
+        <div class="crypto-details" id="crypto-details" style="display:none;">
+            <img id="crypto-logo" src="" alt="Crypto Logo">
+            <p>Address: <span id="crypto-address"></span></p>
+            <p>Email (for Kraken Pay): <span id="crypto-email"></span></p>
+        </div>
         <button onclick="hideCryptoPopup()">Close</button>
     </div>
 
@@ -165,16 +172,25 @@
                 name: 'Tron',
                 logo: 'path/to/tron-logo.png',
                 address: 'YourTronAddress'
+            },
+            kraken: {
+                name: 'Kraken Pay',
+                logo: 'path/to/kraken-logo.png',
+                email: 'kkaann@my.com'
             }
         };
 
-        function showCryptoPopup(crypto) {
-            const popup = document.getElementById('crypto-popup');
+        function showCryptoPopup() {
+            document.getElementById('crypto-popup').classList.add('active');
+            document.getElementById('crypto-details').style.display = 'none';
+        }
+
+        function selectCrypto(crypto) {
             const cryptoInfo = cryptoData[crypto];
-            document.getElementById('crypto-name').innerText = cryptoInfo.name;
             document.getElementById('crypto-logo').src = cryptoInfo.logo;
-            document.getElementById('crypto-address').innerText = cryptoInfo.address;
-            popup.classList.add('active');
+            document.getElementById('crypto-address').innerText = cryptoInfo.address || '';
+            document.getElementById('crypto-email').innerText = cryptoInfo.email || '';
+            document.getElementById('crypto-details').style.display = 'block';
         }
 
         function hideCryptoPopup() {
