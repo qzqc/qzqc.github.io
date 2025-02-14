@@ -103,10 +103,24 @@
                 width: 40px;
                 height: 40px;
             }
+            .crypto-popup {
+                top: 60%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                padding: 10px;
+                width: 90%;
+            }
+            .crypto-popup.active {
+                transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+            }
         }
         @media (prefers-color-scheme: dark) {
             body {
                 background-color: #121212;
+                color: white;
+            }
+            .crypto-popup {
+                background-color: #333;
                 color: white;
             }
         }
