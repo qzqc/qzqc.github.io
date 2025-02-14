@@ -42,6 +42,13 @@
             width: 200px;
             height: 50px;
             transition: all 3s ease-in-out;
+            animation: menColors 10s infinite;
+        }
+        @keyframes menColors {
+            0% { filter: hue-rotate(0deg); }
+            33% { filter: hue-rotate(120deg); }
+            66% { filter: hue-rotate(240deg); }
+            100% { filter: hue-rotate(360deg); }
         }
         .footer {
             background-color: #4e7084;
@@ -76,6 +83,9 @@
             </a>
             <a href="https://www.paypal.com/donate?hosted_button_id=YOUR_BUTTON_ID" target="_blank">
                 <img src="/assets/donate/paypal/black.svg" class="paypal-button" alt="Donate with PayPal">
+            </a>
+            <a href="https://www.paypal.com/donate?hosted_button_id=YOUR_BUTTON_ID" target="_blank">
+                <img src="/assets/donate/paypal/grey.svg" class="paypal-button" alt="Donate with PayPal">
             </a>
         </div>
     </div>
