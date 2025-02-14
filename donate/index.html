@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Donate</title>
     <link rel="icon" type="image/png" href="/assets/favicon_io/android-chrome-512x512.png">
+    <link rel="stylesheet" type="text/css" href="https://raw.githubusercontent.com/yadomi/doge-button/master/dogebutton.min.css">
     <style>
         @font-face {
             font-family: 'SteagalW01Bold';
@@ -54,6 +55,15 @@
             width: 100%;
             height: auto;
             border-radius: 0;
+        }
+        .doge-buttons {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+        }
+        .doge-buttons .xdgbtn {
+            width: 48%;
         }
         @keyframes menColors {
             0% { filter: hue-rotate(0deg); }
@@ -147,6 +157,15 @@
                 <img src="/assets/donate/paypal/grey.svg" class="donation-button" alt="Donate with Cryptocurrency">
             </button>
         </div>
+        <div class="doge-buttons">
+            <div data-xdgbtn-address="DKVtwbh8YWrXtn5qz8DTB9ZamoYXneKn9F"></div>
+            <div data-xdgbtn-address="DKVtwbh8YWrXtn5qz8DTB9ZamoYXneKn9F"></div>
+            <div data-xdgbtn-address="DKVtwbh8YWrXtn5qz8DTB9ZamoYXneKn9F"></div>
+            <div data-xdgbtn-address="DKVtwbh8YWrXtn5qz8DTB9ZamoYXneKn9F"></div>
+            <div data-xdgbtn-address="DKVtwbh8YWrXtn5qz8DTB9ZamoYXneKn9F"></div>
+            <div data-xdgbtn-address="DKVtwbh8YWrXtn5qz8DTB9ZamoYXneKn9F"></div>
+            <div data-xdgbtn-address="DKVtwbh8YWrXtn5qz8DTB9ZamoYXneKn9F"></div>
+        </div>
     </div>
 
     <div class="crypto-popup" id="crypto-popup">
@@ -183,6 +202,7 @@
         <p>&copy; 2025 qzqc Recordings | All rights reserved.</p>
     </div>
 
+    <script src="https://raw.githubusercontent.com/yadomi/doge-button/master/dogebutton.min.js"></script>
     <script>
         const cryptoData = {
             bitcoin: {
