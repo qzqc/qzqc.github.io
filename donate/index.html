@@ -88,6 +88,18 @@
             width: 50px;
             height: 50px;
         }
+        .blur-background {
+            filter: blur(5px);
+        }
+        .close-button {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background: none;
+            border: none;
+            font-size: 20px;
+            cursor: pointer;
+        }
     </style>
 </head>
 <body>
@@ -96,7 +108,7 @@
         <p>Support us with your donation</p>
     </div>
 
-    <div class="main-content">
+    <div class="main-content" id="main-content">
         <div class="donation-buttons">
             <a href="https://papara.com/donate/kkaannmycom" target="_blank">
                 <img src="/assets/donate/paypal/grey.svg" class="donation-button" alt="Donate with Papara">
@@ -125,6 +137,7 @@
     </div>
 
     <div class="crypto-popup" id="crypto-popup">
+        <button class="close-button" onclick="hideCryptoPopup()">X</button>
         <h2>Donate with Cryptocurrency</h2>
         <div class="crypto-options">
             <button onclick="selectCrypto('bitcoin')">Bitcoin Lightning</button>
@@ -139,7 +152,6 @@
             <p>Address: <span id="crypto-address"></span></p>
             <p>Email (for Kraken Pay): <span id="crypto-email"></span></p>
         </div>
-        <button onclick="hideCryptoPopup()">Close</button>
     </div>
 
     <div class="footer">
@@ -182,6 +194,7 @@
 
         function showCryptoPopup() {
             document.getElementById('crypto-popup').classList.add('active');
+            document.getElementById('main-content').classList.add('blur-background');
             document.getElementById('crypto-details').style.display = 'none';
         }
 
@@ -195,6 +208,7 @@
 
         function hideCryptoPopup() {
             document.getElementById('crypto-popup').classList.remove('active');
+            document.getElementById('main-content').classList.remove('blur-background');
         }
     </script>
 </body>
