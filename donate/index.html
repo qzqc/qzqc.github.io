@@ -4,18 +4,93 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Donate</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/png" href="/assets/favicon_io/android-chrome-512x512.png">
+    <style>
+        @font-face {
+            font-family: 'SteagalW01Bold';
+            src: url('/assets/fonts/Steagal W01 Bold.ttf') format('truetype'),
+                 url('/assets/fonts/Steagal W01 Bold.otf') format('opentype');
+            font-weight: bold;
+            font-style: normal;
+        }
+        body {
+            font-family: 'SteagalW01Bold', Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            transition: background-color 0.5s;
+        }
+        .header {
+            background-color: #4e7084;
+            color: white;
+            text-align: center;
+            padding: 15px 0;
+        }
+        .main-content {
+            padding: 30px;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        .donation-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 50px;
+        }
+        .paypal-button {
+            width: 200px;
+            height: 50px;
+            transition: background-color 0.5s;
+        }
+        .paypal-button:hover {
+            transform: scale(1.1);
+        }
+        .footer {
+            background-color: #4e7084;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+        @media (prefers-color-scheme: dark) {
+            body {
+                background-color: #121212;
+                color: white;
+            }
+        }
+    </style>
 </head>
 <body>
-    <div class="donation-container">
-        <h1>Support Us</h1>
-        <div class="buttons">
-            <button class="donate-button paypal">Donate with PayPal</button>
-            <button class="donate-button paypal">Donate with PayPal</button>
-            <button class="donate-button buy-coffee">Buy Me a Coffee</button>
-            <button class="donate-button buy-coffee">Buy Me a Coffee</button>
+    <div class="header">
+        <h1>Donate</h1>
+        <p>Support us with your donation</p>
+    </div>
+
+    <div class="main-content">
+        <div class="donation-buttons">
+            <img src="/assets/donate/paypal/grey.svg" class="paypal-button grey" alt="Donate with PayPal">
+            <img src="/assets/donate/paypal/blue.svg" class="paypal-button blue" alt="Donate with PayPal">
+            <img src="/assets/donate/paypal/black.svg" class="paypal-button black" alt="Donate with PayPal">
         </div>
     </div>
-    <script src="scripts.js"></script>
+
+    <div class="footer">
+        <p>&copy; 2025 qzqc Recordings | All rights reserved.</p>
+    </div>
+
+    <script>
+        const buttons = document.querySelectorAll('.paypal-button');
+        let colors = ['grey', 'blue', 'black'];
+        buttons.forEach(button => {
+            button.addEventListener('mouseover', () => {
+                let nextColor = colors[(colors.indexOf(button.classList[1]) + 1) % colors.length];
+                button.src = `/assets/donate/paypal/${nextColor}.svg`;
+                button.classList.remove('grey', 'blue', 'black');
+                button.classList.add(nextColor);
+            });
+        });
+    </script>
 </body>
 </html>
