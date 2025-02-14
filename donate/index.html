@@ -40,10 +40,12 @@
         .paypal-button {
             width: 200px;
             height: 50px;
-            transition: background-color 0.5s;
+            transition: all 3s ease-in-out;
+            animation: rainbow 10s infinite;
         }
-        .paypal-button:hover {
-            transform: scale(1.1);
+        @keyframes rainbow {
+            0% { filter: hue-rotate(0deg); }
+            100% { filter: hue-rotate(360deg); }
         }
         .footer {
             background-color: #4e7084;
@@ -70,27 +72,14 @@
 
     <div class="main-content">
         <div class="donation-buttons">
-            <img src="/assets/donate/paypal/grey.svg" class="paypal-button grey" alt="Donate with PayPal">
-            <img src="/assets/donate/paypal/blue.svg" class="paypal-button blue" alt="Donate with PayPal">
-            <img src="/assets/donate/paypal/black.svg" class="paypal-button black" alt="Donate with PayPal">
+            <a href="https://www.paypal.com/donate?hosted_button_id=YOUR_BUTTON_ID" target="_blank">
+                <img src="/assets/donate/paypal/grey.svg" class="paypal-button" alt="Donate with PayPal">
+            </a>
         </div>
     </div>
 
     <div class="footer">
         <p>&copy; 2025 qzqc Recordings | All rights reserved.</p>
     </div>
-
-    <script>
-        const buttons = document.querySelectorAll('.paypal-button');
-        let colors = ['grey', 'blue', 'black'];
-        buttons.forEach(button => {
-            button.addEventListener('mouseover', () => {
-                let nextColor = colors[(colors.indexOf(button.classList[1]) + 1) % colors.length];
-                button.src = `/assets/donate/paypal/${nextColor}.svg`;
-                button.classList.remove('grey', 'blue', 'black');
-                button.classList.add(nextColor);
-            });
-        });
-    </script>
 </body>
 </html>
