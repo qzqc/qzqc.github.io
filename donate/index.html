@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -38,6 +37,9 @@
             align-items: center;
             gap: 20px;
             margin-top: 50px;
+        }
+        .donation-buttons a {
+            display: block;
         }
         .paypal-button {
             width: 200px;
@@ -79,22 +81,21 @@
             <a href="https://papara.com/donate/kkaannmycom" target="_blank">
                 <img src="/assets/donate/paypal/grey.svg" class="paypal-button" alt="Donate with Papara">
             </a>
-           <div id="donate-button-container">
-<div id="donate-button"></div>
-<script src="https://www.paypalobjects.com/donate/sdk/donate-sdk.js" charset="UTF-8"></script>
-<script>
-PayPal.Donation.Button({
-env:'production',
-hosted_button_id:'64BUN87XTCSMC',
-image: {
-src:'https://pics.paypal.com/00/s/NGEzYjE0NzgtMGZjMC00MTEwLTlmYmMtNzc0M2NiZDNkNjhj/file.PNG',
-alt:'Donate with PayPal button',
-title:'PayPal - The safer, easier way to pay online!',
-}
-}).render('#donate-button');
-</script>
-</div>
-            </a>
+            <div id="donate-button-container">
+                <div id="donate-button"></div>
+                <script src="https://www.paypalobjects.com/donate/sdk/donate-sdk.js" charset="UTF-8"></script>
+                <script>
+                    PayPal.Donation.Button({
+                        env: 'production',
+                        hosted_button_id: '64BUN87XTCSMC',
+                        image: {
+                            src: 'https://pics.paypal.com/00/s/NGEzYjE0NzgtMGZjMC00MTEwLTlmYmMtNzc0M2NiZDNkNjhj/file.PNG',
+                            alt: 'Donate with PayPal button',
+                            title: 'PayPal - The safer, easier way to pay online!',
+                        }
+                    }).render('#donate-button');
+                </script>
+            </div>
             <a href="https://www.buymeacoffee.com/qzqc" target="_blank">
                 <img src="https://cdn.buymeacoffee.com/buttons/v2/default-blue.png" class="paypal-button" alt="Donate with BuyMeACoffee">
             </a>
