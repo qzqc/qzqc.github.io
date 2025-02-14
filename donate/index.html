@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Donate</title>
     <link rel="icon" type="image/png" href="/assets/favicon_io/android-chrome-512x512.png">
-    <link rel="stylesheet" type="text/css" href="https://raw.githubusercontent.com/yadomi/doge-button/master/dogebutton.min.css">
     <style>
         @font-face {
             font-family: 'SteagalW01Bold';
@@ -55,15 +54,6 @@
             width: 100%;
             height: auto;
             border-radius: 0;
-        }
-        .doge-buttons {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 20px;
-        }
-        .doge-buttons .xdgbtn {
-            width: 48%;
         }
         @keyframes menColors {
             0% { filter: hue-rotate(0deg); }
@@ -157,15 +147,6 @@
                 <img src="/assets/donate/paypal/grey.svg" class="donation-button" alt="Donate with Cryptocurrency">
             </button>
         </div>
-        <div class="doge-buttons">
-            <div data-xdgbtn-address="DKVtwbh8YWrXtn5qz8DTB9ZamoYXneKn9F"></div>
-            <div data-xdgbtn-address="DKVtwbh8YWrXtn5qz8DTB9ZamoYXneKn9F"></div>
-            <div data-xdgbtn-address="DKVtwbh8YWrXtn5qz8DTB9ZamoYXneKn9F"></div>
-            <div data-xdgbtn-address="DKVtwbh8YWrXtn5qz8DTB9ZamoYXneKn9F"></div>
-            <div data-xdgbtn-address="DKVtwbh8YWrXtn5qz8DTB9ZamoYXneKn9F"></div>
-            <div data-xdgbtn-address="DKVtwbh8YWrXtn5qz8DTB9ZamoYXneKn9F"></div>
-            <div data-xdgbtn-address="DKVtwbh8YWrXtn5qz8DTB9ZamoYXneKn9F"></div>
-        </div>
     </div>
 
     <div class="crypto-popup" id="crypto-popup">
@@ -173,22 +154,22 @@
         <h2>Donate with Cryptocurrency</h2>
         <div class="crypto-options">
             <button onclick="selectCrypto('bitcoin')">
-                <img src="https://github.com/yadomi/doge-button/blob/main/images/bitcoin.png?raw=true" alt="Bitcoin">
+                <img src="/assets/donate/paypal/grey.svg" alt="Bitcoin">
             </button>
             <button onclick="selectCrypto('ethereum')">
-                <img src="https://github.com/yadomi/doge-button/blob/main/images/ethereum.png?raw=true" alt="Ethereum">
+                <img src="/assets/donate/paypal/grey.svg" alt="Ethereum">
             </button>
             <button onclick="selectCrypto('litecoin')">
-                <img src="https://github.com/yadomi/doge-button/blob/main/images/litecoin.png?raw=true" alt="Litecoin">
+                <img src="/assets/donate/paypal/grey.svg" alt="Litecoin">
             </button>
             <button onclick="selectCrypto('dogecoin')">
-                <img src="https://github.com/yadomi/doge-button/blob/main/images/dogecoin.png?raw=true" alt="Dogecoin">
+                <img src="/assets/donate/paypal/grey.svg" alt="Dogecoin">
             </button>
             <button onclick="selectCrypto('tron')">
-                <img src="https://github.com/yadomi/doge-button/blob/main/images/tron.png?raw=true" alt="Tron">
+                <img src="/assets/donate/paypal/grey.svg" alt="Tron">
             </button>
             <button onclick="selectCrypto('kraken')">
-                <img src="https://github.com/yadomi/doge-button/blob/main/images/kraken.png?raw=true" alt="Kraken Pay">
+                <img src="/assets/donate/paypal/grey.svg" alt="Kraken Pay">
             </button>
         </div>
         <div class="crypto-details" id="crypto-details" style="display:none;">
@@ -202,37 +183,30 @@
         <p>&copy; 2025 qzqc Recordings | All rights reserved.</p>
     </div>
 
-    <script src="https://raw.githubusercontent.com/yadomi/doge-button/master/dogebutton.min.js"></script>
     <script>
         const cryptoData = {
             bitcoin: {
                 name: 'Bitcoin Lightning',
-                logo: 'https://github.com/yadomi/doge-button/blob/main/images/bitcoin.png?raw=true',
                 address: 'YourBitcoinLightningAddress'
             },
             ethereum: {
                 name: 'Ethereum',
-                logo: 'https://github.com/yadomi/doge-button/blob/main/images/ethereum.png?raw=true',
                 address: 'YourEthereumAddress'
             },
             litecoin: {
                 name: 'Litecoin',
-                logo: 'https://github.com/yadomi/doge-button/blob/main/images/litecoin.png?raw=true',
                 address: 'YourLitecoinAddress'
             },
             dogecoin: {
                 name: 'Dogecoin',
-                logo: 'https://github.com/yadomi/doge-button/blob/main/images/dogecoin.png?raw=true',
                 address: 'YourDogecoinAddress'
             },
             tron: {
                 name: 'Tron',
-                logo: 'https://github.com/yadomi/doge-button/blob/main/images/tron.png?raw=true',
                 address: 'YourTronAddress'
             },
             kraken: {
                 name: 'Kraken Pay',
-                logo: 'https://github.com/yadomi/doge-button/blob/main/images/kraken.png?raw=true',
                 email: 'kkaann@my.com'
             }
         };
@@ -251,7 +225,7 @@
 
         function selectCrypto(crypto) {
             const cryptoInfo = cryptoData[crypto];
-            document.getElementById('crypto-logo').src = cryptoInfo.logo;
+            document.getElementById('crypto-logo').src = '';
             document.getElementById('crypto-address').innerText = cryptoInfo.address || '';
             document.getElementById('crypto-email').innerText = cryptoInfo.email || '';
             document.getElementById('crypto-details').style.display = 'block';
