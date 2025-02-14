@@ -67,10 +67,11 @@
             align-items: center;
             width: 100px;
             text-align: center;
+            transition: opacity 0.3s ease-in-out;
         }
         .crypto-option img {
-            width: 50px;
-            height: 50px;
+            width: 40px;
+            height: 40px;
         }
         .crypto-option span {
             margin-top: 5px;
@@ -257,6 +258,17 @@
             document.getElementById('crypto-logo').src = cryptoInfo.logo;
             document.getElementById('crypto-address').innerText = cryptoInfo.address || '';
             document.getElementById('crypto-email').innerText = cryptoInfo.email || '';
+
+            // Update opacity for all crypto options
+            const options = document.querySelectorAll('.crypto-option');
+            options.forEach(option => {
+                if (option.querySelector('span').innerText.toLowerCase() === crypto) {
+                    option.style.opacity = '1';
+                } else {
+                    option.style.opacity = '0.25';
+                }
+            });
+
             document.getElementById('crypto-details').style.display = 'block';
         }
 
