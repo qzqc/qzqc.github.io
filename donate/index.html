@@ -70,18 +70,12 @@
             transition: opacity 0.3s ease-in-out;
         }
         .crypto-option img {
-            width: 40px;
-            height: 40px;
+            width: 30px;
+            height: 30px;
         }
         .crypto-option span {
             margin-top: 5px;
             font-size: 14px;
-        }
-        @keyframes menColors {
-            0% { filter: hue-rotate(0deg); }
-            33% { filter: hue-rotate(120deg); }
-            66% { filter: hue-rotate(240deg); }
-            100% { filter: hue-rotate(360deg); }
         }
         .footer {
             background-color: #4e7084;
@@ -160,7 +154,6 @@
             <a href="https://www.buymeacoffee.com/qzqc" target="_blank">
                 <img src="https://cdn.buymeacoffee.com/buttons/v2/default-blue.png" class="donation-button" alt="Donate with BuyMeACoffee">
             </a>
-            <!-- Single Cryptocurrency Donation Button -->
             <button onclick="showCryptoPopup()">
                 <img src="/assets/donate/paypal/grey.svg" class="donation-button" alt="Donate with Cryptocurrency">
             </button>
@@ -197,7 +190,7 @@
             </div>
         </div>
         <div class="crypto-details" id="crypto-details" style="display:none;">
-            <img id="crypto-logo" src="" alt="Crypto Logo">
+            <img id="crypto-logo" src="" alt="Crypto Logo" style="width: 50px; height: 50px;">
             <p>Address: <span id="crypto-address"></span></p>
             <p>Email (for Kraken Pay): <span id="crypto-email"></span></p>
         </div>
