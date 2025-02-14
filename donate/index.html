@@ -78,8 +78,22 @@
             <a href="https://papara.com/donate/kkaannmycom" target="_blank">
                 <img src="/assets/donate/paypal/grey.svg" class="paypal-button" alt="Donate with Papara">
             </a>
-            <a href="https://www.paypal.com/donate?hosted_button_id=YOUR_BUTTON_ID" target="_blank">
-                <img src="/assets/donate/paypal/blue.svg" class="paypal-button" alt="Donate with PayPal">
+            <div id="donate-button-container">
+<div id="donate-button"></div>
+<script src="https://www.paypalobjects.com/donate/sdk/donate-sdk.js" charset="UTF-8"></script>
+<script>
+PayPal.Donation.Button({
+env:'production',
+hosted_button_id:'64BUN87XTCSMC',
+image: {
+src:'https://www.paypalobjects.com/en_US/CH/i/btn/btn_donateCC_LG.gif',
+alt:'Donate with PayPal button',
+title:'PayPal - The safer, easier way to pay online!',
+}
+}).render('#donate-button');
+</script>
+</div>
+
             </a>
             <a href="https://www.paypal.com/donate?hosted_button_id=YOUR_BUTTON_ID" target="_blank">
                 <img src="/assets/donate/paypal/blue.svg" class="paypal-button" alt="Donate with BuyMeACoffee">
