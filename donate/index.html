@@ -123,6 +123,13 @@
             font-size: 20px;
             cursor: pointer;
         }
+        .crypto-details {
+            text-align: center;
+        }
+        .crypto-details span {
+            display: block;
+            font-weight: bold;
+        }
     </style>
 </head>
 <body>
@@ -191,8 +198,10 @@
         </div>
         <div class="crypto-details" id="crypto-details" style="display:none;">
             <img id="crypto-logo" src="" alt="Crypto Logo" style="width: 50px; height: 50px;">
+            <p><span id="crypto-name"></span></p>
             <p>Address: <span id="crypto-address"></span></p>
             <p>Email (for Kraken Pay): <span id="crypto-email"></span></p>
+            <button onclick="sendCrypto()">Send</button>
         </div>
     </div>
 
@@ -249,6 +258,7 @@
         function selectCrypto(crypto) {
             const cryptoInfo = cryptoData[crypto];
             document.getElementById('crypto-logo').src = cryptoInfo.logo;
+            document.getElementById('crypto-name').innerText = cryptoInfo.name;
             document.getElementById('crypto-address').innerText = cryptoInfo.address || '';
             document.getElementById('crypto-email').innerText = cryptoInfo.email || '';
 
@@ -263,6 +273,16 @@
             });
 
             document.getElementById('crypto-details').style.display = 'block';
+        }
+
+        function sendCrypto() {
+            const cryptoType = document.querySelector('.crypto-option[style*="opacity: 1"]').querySelector('span').innerText.toLowerCase();
+            const cryptoInfo = cryptoData[cryptoType];
+            if (cryptoType === 'kraken') {
+                window.location.href = `mailto:${cryptoInfo.email}`;
+            } else {
+                window.location.href = `${cryptoType}:${cryptoInfo.address}`;
+            }
         }
 
         function hideCryptoPopup() {
