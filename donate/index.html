@@ -318,7 +318,7 @@ title:'PayPal - The safer, easier way to pay online!',
             if (cryptoType === 'kraken') {
                 window.location.href = `mailto:${cryptoInfo.email}`;
             } else {
-                window.location.href = `${cryptoType}:${cryptoInfo.address}`;
+                window.location.href = `${encodeURIComponent(cryptoType)}:${encodeURIComponent(cryptoInfo.address)}`;
             }
         }
 
